@@ -1,0 +1,8 @@
+services:
+  api:
+    build: .
+    ports:
+      - "${APP_PORT:-8080}:8080"
+    env_file:
+      - .env
+    restart: unless-stopped
